@@ -4,8 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node build/index.js"
+    "prestart": " rimraf build && tsc  && mkdir build\\src\\assets && copy src\\assets\\ build\\src\\assets\\ ",
+    "start": "node build/src/index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^14.11.2"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  }
 }
